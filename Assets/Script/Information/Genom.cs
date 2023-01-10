@@ -33,6 +33,9 @@ public class Genom : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (diallog.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
     }
 }

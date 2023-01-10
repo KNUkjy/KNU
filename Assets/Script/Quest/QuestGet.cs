@@ -11,10 +11,16 @@ public class QuestGet : MonoBehaviour
     public GameObject[] QuestList;
     public GameObject QuestGetTxt;
     public Quest Quest;
+    IEnumerator messageActive()
+    {
+       
+        yield return new WaitForSeconds(1.1f);
+        MessageActive();
+    }
     IEnumerator questGetText()
     {
         QuestGetTxt.SetActive(true);
-        yield return new WaitForSeconds(1.3f);
+        yield return new WaitForSeconds(1.1f);
         QuestGetTxt.SetActive(false);
     }
     public void MessageOpen()
@@ -57,7 +63,7 @@ public class QuestGet : MonoBehaviour
     {
         Quest = GameObject.Find("Player").GetComponent<Quest>();
         QuestList = Quest.questList;
-        StartCoroutine(questGetText());
+        StartCoroutine(messageActive());
     }
 
 

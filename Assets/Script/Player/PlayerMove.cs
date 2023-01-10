@@ -26,10 +26,11 @@ public class PlayerMove : MonoBehaviour
     {
         tr = this.gameObject.GetComponent<Transform>();
         runAnim = KiKi.GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Confined;
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         h = Input.GetAxis("Horizontal");

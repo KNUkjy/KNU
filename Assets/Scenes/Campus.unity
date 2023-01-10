@@ -8857,7 +8857,6 @@ GameObject:
   - component: {fileID: 575569477}
   - component: {fileID: 575569479}
   - component: {fileID: 575569478}
-  - component: {fileID: 575569480}
   m_Layer: 5
   m_Name: Quest
   m_TagString: Untagged
@@ -8928,25 +8927,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 575569476}
   m_CullTransparentMesh: 1
---- !u!114 &575569480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575569476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49bde99074f8f2f44affaca4e7295405, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questpostbox: {fileID: 575569476}
-  quest: {fileID: 91718372}
-  questList:
-  - {fileID: 636859840}
-  - {fileID: 130832289}
-  - {fileID: 1385867841}
-  - {fileID: 1646084376}
 --- !u!1 &587772397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1360540141356437291, guid: d00fef9f7cad33a46977c2a746fed0d5,

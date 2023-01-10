@@ -32,6 +32,10 @@ public class Art : MonoBehaviour
    
     void Update()
     {
-        
+        if (diallog.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
+
     }
 }

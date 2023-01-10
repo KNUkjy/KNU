@@ -14,6 +14,7 @@ public class Quest : MonoBehaviour
     {
         questpostbox.SetActive(true);
         Time.timeScale = 0;
+
     }
     public void questBoxClose()
     {
@@ -22,7 +23,7 @@ public class Quest : MonoBehaviour
     }
     public void questlist()
     {
-        for (int i = 1; i <= questList.Length; i++)
+        for (int i = 0; i <= questList.Length; i++)
         {
             questList[i].SetActive(false);
         }
@@ -37,6 +38,9 @@ public class Quest : MonoBehaviour
  
     void Update()
     {
-        
+        if (questpostbox.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
     }
 }

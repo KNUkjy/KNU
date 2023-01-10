@@ -26,6 +26,9 @@ public class SmartPhone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (smartPhone.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
     }
 }
