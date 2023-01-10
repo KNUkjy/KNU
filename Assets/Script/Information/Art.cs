@@ -29,7 +29,7 @@ public class Art : MonoBehaviour
         ItemList = inven.itemList;
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
         
