@@ -13,6 +13,7 @@ public class PlayerMove : MonoBehaviour
     private Transform tr;
     public float moveSpeed = 0.7f;
     public float rotSpeed = 40.0f;
+    
 
     public void Playermove()
     {
@@ -20,33 +21,16 @@ public class PlayerMove : MonoBehaviour
         if (dir.sqrMagnitude > (1.0f * 1.0f)) dir = dir.normalized;
         tr.Translate(dir * moveSpeed * Time.deltaTime, Space.Self);
         tr.Rotate(Vector3.up * x * rotSpeed * Time.deltaTime);
+        
+        
     }
 
-    void Start()
+    public void PlayerAnim()
     {
-        tr = this.gameObject.GetComponent<Transform>();
-        runAnim = KiKi.GetComponent<Animator>();
-        Cursor.lockState = CursorLockMode.Confined;
-
-    }
-
-    
-    void Update()
-    {
-        h = Input.GetAxis("Horizontal");
-        v = Input.GetAxis("Vertical");
-        x = Input.GetAxis("Mouse X");
-
-
-        float mouse_X = Input.GetAxis("Mouse X");
-        float mouse_Y = Input.GetAxis("Mouse Y");
-
-        Playermove();
-
-
         if (Input.GetKeyDown(KeyCode.W))
         {
             runAnim.SetBool("RunBool", true);
+
         }
         else if (Input.GetKeyUp(KeyCode.W))
         {
@@ -78,6 +62,28 @@ public class PlayerMove : MonoBehaviour
         {
             runAnim.SetBool("RunBool", false);
         }
+    }
+    void Start()
+    {
+        tr = this.gameObject.GetComponent<Transform>();
+        runAnim = KiKi.GetComponent<Animator>();
+        Cursor.lockState = CursorLockMode.Confined;
+
+    }
+
+
+    void Update()
+    {
+        h = Input.GetAxis("Horizontal");
+        v = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Mouse X");
+
+
+        float mouse_X = Input.GetAxis("Mouse X");
+        float mouse_Y = Input.GetAxis("Mouse Y");
+
+        Playermove();
+        PlayerAnim();
     }
     } 
 
